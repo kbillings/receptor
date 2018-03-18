@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
+    "compression-webpack-plugin": "^1.1.11",
     "react-redux": "^5.0.6",
     "reactstrap": "^4.8.0",
     "redux": "^3.7.2",

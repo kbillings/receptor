@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const defines = {
   "DEFAULT_WS_URI": process.env.WEBSOCKET_URI || "ws://127.0.0.1:8412/"
@@ -55,6 +56,7 @@ module.exports = {
     (env !== "production" && new webpack.HotModuleReplacementPlugin()),
     new webpack.EnvironmentPlugin(defines),
     new webpack.NamedModulesPlugin(),
+    new CompressionPlugin({}),
   ].filter(p => p),
   resolve: {
     alias: {
